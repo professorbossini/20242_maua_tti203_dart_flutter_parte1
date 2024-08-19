@@ -64,3 +64,8 @@ void jogo(){
 
   }while (opUsuario != 4);
 }
+
+//adaptar o jogo para que seja feita uma contagem de pontuação
+//quem ganha, faz um ponto
+//o usuário seleciona quantas rodadas deseja (validar de 1 a 5)
+//mostrar quem ganhou no final
