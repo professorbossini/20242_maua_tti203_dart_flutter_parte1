@@ -4,6 +4,16 @@
 
 //criar um enum que representa as opções, lembrando que o usuário pode querer sair
 
+/*
+  - novos requisitos
+  - permitir ao usuário que escolha quantas rodadas deseja
+  - a cada rodada, dar um ponto para o vencedor
+  - mostrar o vencedor do jogo total no final
+  - se empatar, fazer "penaltis", ou seja, fazer uma única nova rodada até que alguém vença
+  - Alterar a probabilidade de ganho: computador vence cada rodada com 60% de chance
+  - Implementar o jogo inteiro utilizando funções
+ */
+
 void jogo(){
 
   //loop que continua enquanto o usuário deseja continuar
