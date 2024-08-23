@@ -1,0 +1,5 @@
+- Implemente um cadastro de contatos
+- Contatos têm nome e telefone (celular). Pesquise como validar o formato do celular (xx) xxxxx-xxxx com expressões regulares.
+- Deve ser possível:
+  - cadastrar novos contatos, com dados digitados pelo usuário
+  - consultar a lista de contatos
