@@ -1,34 +1,36 @@
 // import 'package:colecoes/colecoes.dart' as colecoes;
 
 
-void main(){
-  //iteração sobre mapas
-  //keys, values, entries
-  //keys te dá as chaves de um mapa
-  //values te dá os valores de um mapa
-  //entries te dá uma coleção de pares. cada par tem uma chave e o valor associado
 
-  var pessoa = <String, dynamic> {
-    'nome': 'Pedro',
-    'idade': 19
-  };
 
-  //cada item a seguir, resolver com um for each
+// void main(){
+//   //iteração sobre mapas
+//   //keys, values, entries
+//   //keys te dá as chaves de um mapa
+//   //values te dá os valores de um mapa
+//   //entries te dá uma coleção de pares. cada par tem uma chave e o valor associado
 
-  //usando keys, exibir cada chave do mapa
-  for (final key in pessoa.keys){
-    print(key);
-  }
-  //usando values, exibir cada valor do mapa
-  for(final value in pessoa.values){
-    print(value);
-  }
-  //usando entries, exibir cada par chave/valor do mapa
-  for (final entry in pessoa.entries){
-    print(entry.key);
-    print(entry.value);
-  }
-}
+//   var pessoa = <String, dynamic> {
+//     'nome': 'Pedro',
+//     'idade': 19
+//   };
+
+//   //cada item a seguir, resolver com um for each
+
+//   //usando keys, exibir cada chave do mapa
+//   for (final key in pessoa.keys){
+//     print(key);
+//   }
+//   //usando values, exibir cada valor do mapa
+//   for(final value in pessoa.values){
+//     print(value);
+//   }
+//   //usando entries, exibir cada par chave/valor do mapa
+//   for (final entry in pessoa.entries){
+//     print(entry.key);
+//     print(entry.value);
+//   }
+// }
 
 // void main(){
 
