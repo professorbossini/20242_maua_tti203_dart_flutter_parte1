@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
+import 'src/app.dart';
 //material design
 void main(){
-  var app = MaterialApp(
-    home: Scaffold(
-      appBar: AppBar(
-        title: const Text("Minhas imagens"),
-      ),
-    )
-  );
+  var app = App();
   runApp(app);
 }
