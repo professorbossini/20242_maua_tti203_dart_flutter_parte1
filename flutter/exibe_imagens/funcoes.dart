@@ -1,29 +1,29 @@
 
 void main(){
-  final f1 = (){
+  f1(){
     print('f1');
-  };
+  }
 
-  final f2 = (){
+  f2(){
     print('f2');
     return ('f2');
-  };
+  }
 
-  final f3 = () => print('f3');
+  f3() => print('f3');
 
-  final f4 = () => {
+  f4() => {
     'a': 'Ana',
     'b': 'Betania'
   };
 
-  final f5 = (){
+  f5(){
     print('oi');
     return {
 
     };
-  };
+  }
 
-  final f6 = () => {1, 2};
+  f6() => {1, 2};
 
   f1();
   print(f2());
