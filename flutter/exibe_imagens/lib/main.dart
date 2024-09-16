@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 
 void main(){
   final app = MaterialApp(
@@ -8,5 +9,10 @@ void main(){
       ),
     ),
   );
+=======
+import 'src/app.dart';
+void main(){
+  final app = App();
+>>>>>>> g1-t2
   runApp(app);
 }

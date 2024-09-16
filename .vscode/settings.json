@@ -1,3 +1,7 @@
 {
+<<<<<<< HEAD
   "terminal.integrated.fontSize": 26
+=======
+  "terminal.integrated.fontSize": 22
+>>>>>>> g1-t2
 }
