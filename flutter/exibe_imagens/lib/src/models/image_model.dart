@@ -16,5 +16,10 @@ class ImageModel{
   // ImageModel(String url, String alt){
   //   this.url = url;
   //   this.alt = alt;
-  // }  
+  // }
+
+  @override
+  String toString() {
+    return 'url: $url, alt: $alt';
+  }  
 }
