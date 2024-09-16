@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'models/image_model.dart';
+import 'widgets/image_list.dart';
 
 class App extends StatefulWidget {
   State<App> createState() {
@@ -11,26 +12,30 @@ class App extends StatefulWidget {
 
 class AppState extends State<App> {
   int numeroImagens = 0;
+  List<ImageModel> imagens = [];
 
   void obterImagem() async {
     var url = Uri.https(
       'api.pexels.com',
       '/v1/search',
-      {'query': 'people', 'page': '1', 'per_page': '1'},
+      {'query': 'people', 'page': '${numeroImagens + 1}', 'per_page': '1'},
     );
     var req = http.Request('get', url);
     req.headers.addAll(
       {
-        'Authorization': 'chave',
+        'Authorization':
+            'a91Qyfh2Ud1rdeOGKV8aTR5Aj9UmRvdma6EdyhC9EfKStoAyt7rmDuhV',
       },
     );
     final result = await req.send();
     if (result.statusCode == 200) {
       final response = await http.Response.fromStream(result);
       var decodedJSON = json.decode(response.body);
-
       var imagem = ImageModel.fromJSON(decodedJSON);
-      print(imagem);
+      setState(() {
+        imagens.add(imagem);
+        numeroImagens++;
+      });
     } else {
       print('Falhou!');
     }
@@ -43,14 +48,9 @@ class AppState extends State<App> {
         appBar: AppBar(
           title: const Text("Hello, Flutter"),
         ),
-        body: Text('$numeroImagens'),
+        body: ImageList(imagens),
         floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            // numeroImagens++;
-            setState(() {
-              numeroImagens++;
-            });
-          },
+          onPressed: obterImagem,
           child: const Icon(Icons.add),
           // child: const Icon(IconData(0xe04d, fontFamily: 'MaterialIcons')),
         ),
