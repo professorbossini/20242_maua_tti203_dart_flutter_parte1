@@ -1,4 +1,5 @@
 import 'package:exibe_imagens/src/models/image_model.dart';
+import 'package:exibe_imagens/src/widgets/image_list.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
@@ -11,11 +12,11 @@ class App extends StatefulWidget {
 
 class AppState extends State<App> {
   int numeroImagens = 0;
-
+  List<ImageModel> imagens = [];
   void obterImagem() async {
     //https://api.pexels.com/v1/search?query=people&page=1&per_page=1
     final url = Uri.https('api.pexels.com', '/v1/search',
-        {'query': 'people', 'page': '1', 'per_page': '1'});
+        {'query': 'people', 'page': '${imagens.length + 1}', 'per_page': '1'});
 
     final req = http.Request('get', url);
 
@@ -28,6 +29,10 @@ class AppState extends State<App> {
     final response = await http.Response.fromStream(result);
     final mapa = json.decode(response.body);
     final imagem = ImageModel.fromJSON(mapa);
+    // print(imagem);
+    setState(() {
+      imagens.add(imagem);
+    });
     // req.send().then((result) {
     //   http.Response.fromStream(result).then((response) {
     //     final mapa = json.decode(response.body);
@@ -50,7 +55,7 @@ class AppState extends State<App> {
         onPressed: obterImagem,
         child: const Icon(Icons.add),
       ),
-      body: Text('$numeroImagens'),
+      body: ImageList(imagens),
     ));
   }
 }
