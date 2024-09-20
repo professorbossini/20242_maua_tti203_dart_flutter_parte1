@@ -1,0 +1,18 @@
+Exercício proposto antes da P1 em 20/09/2024
+
+Nova pasta
+
+VS Code: File >> New Folder, Terminal New Terminal
+
+git clone https://github.com/professorbossini/20242_maua_tti203_dart_flutter_parte1 .
+
+git pull origin g2-t3
+
+git switch g2-t3
+
+Exercício:
+- Permita que o usuário digite o termo de busca, adicionando um novo campo textual
+
+- Ajuste a paginação para que a aplicação faça o download de duas fotos a cada clique. Claro, é preciso tratar o JSON adequadamente a cada requisição.
+
+- Adicione um novo campo à exibição de cada foto: ele exibe o link do fotógrafo que tirou aquela foto
